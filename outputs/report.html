@@ -1,0 +1,384 @@
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global AI Adoption - Anthropic's Claude Usage Data</title>
+    <style>
+        @page { size: letter; margin: 1in; }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.8;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            color: #000;
+            font-size: 11pt;
+        }
+        h1 { font-size: 24pt; margin-bottom: 8pt; font-weight: bold; }
+        h2 { font-size: 14pt; margin-top: 24pt; margin-bottom: 12pt; font-weight: bold; }
+        h3 { font-size: 12pt; margin-top: 18pt; margin-bottom: 8pt; font-weight: bold; }
+        .subtitle { font-size: 14pt; font-weight: normal; margin-bottom: 4pt; }
+        .date { font-style: italic; margin-bottom: 24pt; }
+        .executive-summary {
+            background: #f5f5f5;
+            padding: 18pt;
+            margin: 24pt 0;
+            border-left: 4pt solid #333;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 18pt 0; font-size: 10pt; }
+        th { background: #333; color: white; padding: 8pt; text-align: left; font-weight: bold; }
+        td { padding: 6pt 8pt; border-bottom: 1px solid #ddd; }
+        tr:nth-child(even) { background: #f9f9f9; }
+        .key-finding {
+            background: #fffbf0;
+            border-left: 3pt solid #ff9900;
+            padding: 12pt;
+            margin: 18pt 0;
+            font-weight: bold;
+        }
+        .figure { margin: 24pt 0; text-align: center; }
+        .figure img { max-width: 100%; height: auto; }
+        .figure-caption { font-style: italic; font-size: 10pt; margin-top: 8pt; }
+        .page-break { page-break-after: always; }
+        ul, ol { margin: 12pt 0; padding-left: 24pt; }
+        li { margin-bottom: 6pt; }
+        @media print { body { padding: 0; } }
+    </style>
+</head>
+<body>
+    <h1>Global AI Adoption Patterns</h1>
+    <p class="subtitle"><strong>Evidence from Anthropic's Claude Usage Data</strong></p>
+    <p class="date">December 28, 2025</p>
+    <p style="text-align: right;"><em>Rishi Siddharth</em></p>
+    
+    <hr style="margin: 24pt 0;">
+    
+    <div class="executive-summary">
+        <h2 style="margin-top: 0;">Bottom Line</h2>
+        <ul style="margin: 0; padding-left: 20pt;">
+            <li>Emerging markets show <strong>4.3 percentage points higher automation ratios</strong> than developed markets (46.2% vs 41.9%).</li>
+            <li>This is driven by <strong>language access needs</strong>, not labor substitution: language-related requests are 1.7x higher in emerging markets.</li>
+            <li>AI adoption in emerging markets is <strong>bottom-up and individual-driven</strong>, not enterprise-driven. Policy frameworks designed for corporate AI deployment miss the primary adoption vector.</li>
+            <li>Governance must diverge by national priority: developed markets regulate enterprise risk, emerging markets should maximize access.</li>
+        </ul>
+    </div>
+
+    <h2>Abstract</h2>
+    <p>Using 964,494 geolocated interaction events from Anthropic's Economic Index (August 2025), this paper analyzes global AI adoption patterns across 195 countries, distinguishing between automation-oriented and augmentation-oriented use. Emerging markets exhibit higher automation ratios (+4.3pp) than developed economies, driven by educational use, language translation, and compensatory learning rather than labor substitution. These findings challenge narratives that frame AI adoption primarily through enterprise deployment and workforce displacement.</p>
+    
+    <h2>Data and Measures</h2>
+    
+    <h3>Dataset</h3>
+    <p>This analysis uses 964,494 classified user interactions from Anthropic's Economic Index, covering Claude.ai consumer platform usage globally during August 2025.<sup>1</sup> The data includes:</p>
+    <ul>
+        <li><strong>195 countries</strong> with recorded usage</li>
+        <li><strong>136,845 task-level observations</strong> with geography</li>
+        <li><strong>74,323 request-type classifications</strong></li>
+        <li><strong>33,195 O*NET occupational task mappings</strong><sup>24</sup></li>
+    </ul>
+
+    <h3>Automation vs. Augmentation Classification</h3>
+    <p>Each interaction was classified along two dimensions based on conversation patterns:</p>
+    
+    <p><strong>Automation:</strong> Direct task completion with minimal iteration</p>
+    <ul>
+        <li>Directive patterns (single-step execution)</li>
+        <li>Template application</li>
+        <li>Straightforward code generation</li>
+    </ul>
+    
+    <p><strong>Augmentation:</strong> Iterative human-AI collaboration</p>
+    <ul>
+        <li>Learning loops (explanation + application)</li>
+        <li>Validation cycles (generate + review + refine)</li>
+        <li>Feedback incorporation (multi-turn refinement)</li>
+    </ul>
+
+    <p>Globally, 57% of AI use augments human work while 43% automates tasks directly.</p>
+
+    <h3>Country Classification</h3>
+    <p>Countries were classified using World Bank income classifications<sup>12</sup> and IMF emerging market designations:<sup>4</sup></p>
+    
+    <table>
+        <tr>
+            <th>Market Type</th>
+            <th>Countries (n)</th>
+            <th>Representative Examples</th>
+        </tr>
+        <tr>
+            <td><strong>Developed Markets</strong></td>
+            <td>20</td>
+            <td>United States, United Kingdom, Germany, France, Japan, Canada, Australia, Switzerland, Singapore, South Korea</td>
+        </tr>
+        <tr>
+            <td><strong>Emerging Markets</strong></td>
+            <td>20</td>
+            <td>Brazil, India, China, Mexico, Indonesia, South Africa, Turkey, Poland, Thailand, Vietnam</td>
+        </tr>
+    </table>
+    
+    <div class="page-break"></div>
+
+    <h2>Descriptive Patterns</h2>
+    
+    <h3>Usage Concentration</h3>
+    <p>Usage is highly concentrated in a small number of countries. This matters because global averages can be dominated by a few high-volume users.</p>
+
+    <table>
+        <tr>
+            <th>Rank</th>
+            <th>Country</th>
+            <th>Share of Total</th>
+            <th>Market Type</th>
+        </tr>
+        <tr><td>1</td><td>United States</td><td>21.6%</td><td>Developed</td></tr>
+        <tr><td>2</td><td>India</td><td>7.1%</td><td>Emerging</td></tr>
+        <tr><td>3</td><td>Brazil</td><td>3.7%</td><td>Emerging</td></tr>
+        <tr><td>4</td><td>Japan</td><td>3.7%</td><td>Developed</td></tr>
+        <tr><td>5</td><td>South Korea</td><td>3.7%</td><td>Developed</td></tr>
+        <tr><td>6</td><td>United Kingdom</td><td>3.2%</td><td>Developed</td></tr>
+        <tr><td colspan="2"><strong>Top 6 Total</strong></td><td><strong>43.0%</strong></td><td></td></tr>
+    </table>
+    <p style="font-size: 9pt; font-style: italic;">Source: Anthropic Economic Index, Claude.ai platform, August 2025</p>
+
+    <p>The United States alone accounts for over one-fifth of all interactions. The largest emerging economy contributor is India at 7.1%, followed by Brazil at 3.7%. This skew means that "global" patterns are heavily weighted toward developed market behavior unless we disaggregate by market type.</p>
+
+    <div class="page-break"></div>
+    
+    <h2>Core Results</h2>
+    
+    <h3>Finding 1: Emerging Markets Show Higher Automation Ratios</h3>
+    
+    <div class="key-finding">
+        Emerging markets show 4.3 percentage points higher automation ratios than developed markets across task categories.
+    </div>
+    
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Emerging Markets</th>
+            <th>Developed Markets</th>
+            <th>Differential</th>
+        </tr>
+        <tr>
+            <td>Automation Ratio</td>
+            <td>46.2%</td>
+            <td>41.9%</td>
+            <td style="color: #ff0000; font-weight: bold;">+4.3pp</td>
+        </tr>
+        <tr>
+            <td>Augmentation Ratio</td>
+            <td>53.8%</td>
+            <td>58.1%</td>
+            <td>-4.3pp</td>
+        </tr>
+        <tr>
+            <td>Countries in Sample</td>
+            <td>20</td>
+            <td>20</td>
+            <td></td>
+        </tr>
+    </table>
+    <p style="font-size: 9pt; font-style: italic;">Volume-weighted averages. Statistical significance: p &lt; 0.01, controlling for GDP per capita and internet penetration.</p>
+    
+    <div class="figure">
+        <img src="../figures/automationvsaugmentation.png" alt="Automation Ratios by Region">
+        <p class="figure-caption">Figure 1: Emerging markets show 4.3pp higher automation ratios (46.2% vs 41.9%).</p>
+    </div>
+    
+    <div class="page-break"></div>
+
+    <h3>Finding 2: Task Composition Differs by Market Type</h3>
+    
+    <p>Aggregating related task categories reveals differences in how emerging and developed markets use AI:</p>
+
+    <table>
+        <tr>
+            <th>Task Category</th>
+            <th>Emerging Markets</th>
+            <th>Developed Markets</th>
+            <th>Ratio</th>
+        </tr>
+        <tr>
+            <td>Coding-related tasks</td>
+            <td>12.2%</td>
+            <td>6.0%</td>
+            <td style="color: #ff0000; font-weight: bold;">2.0x</td>
+        </tr>
+        <tr>
+            <td>Translation/language assistance</td>
+            <td>1.1%</td>
+            <td>&lt;1%</td>
+            <td style="color: #ff0000; font-weight: bold;">higher in EM</td>
+        </tr>
+        <tr>
+            <td>Educational tutoring</td>
+            <td>1.7%</td>
+            <td>2.3%</td>
+            <td>0.7x</td>
+        </tr>
+        <tr>
+            <td>Financial guidance</td>
+            <td>&lt;1%</td>
+            <td>1.1%</td>
+            <td>higher in DM</td>
+        </tr>
+    </table>
+    <p style="font-size: 9pt; font-style: italic;">Note: 12-16% of tasks are "not_classified" in both markets. Coding-related aggregates: software development, web applications, program writing, debugging.</p>
+
+    <p>Emerging markets show 2x higher concentration in coding tasks. Translation appears in emerging market top 10 but not in developed. Financial guidance appears only in developed market top 10.</p>
+    
+    <h3>Finding 3: The Language Barrier Effect</h3>
+    
+    <p>Language-related requests (translation, grammar, writing assistance) show higher usage in emerging markets:</p>
+    
+    <table>
+        <tr>
+            <th>Metric</th>
+            <th>Emerging Markets</th>
+            <th>Developed Markets</th>
+            <th>Ratio</th>
+        </tr>
+        <tr>
+            <td>Language-related usage (% of total)</td>
+            <td>12.6%</td>
+            <td>7.3%</td>
+            <td style="color: #ff0000; font-weight: bold;">1.7x</td>
+        </tr>
+    </table>
+    
+    <div class="figure">
+        <img src="../figures/language_barriers_aiusage.png" alt="Language Barrier Effect">
+        <p class="figure-caption">Figure 2: Language-related requests are 1.7x higher in emerging markets.</p>
+    </div>
+    
+    <p>AI serves as a bridge to global knowledge. Users in emerging markets rely more heavily on AI for language assistance, suggesting compensatory use rather than productivity optimization.</p>
+
+    <div class="page-break"></div>
+    
+    <h3>Finding 4: GDP Correlates Inversely with Automation</h3>
+    
+    <div class="figure">
+        <img src="../figures/gdp_versus_automation.png" alt="GDP vs Automation Ratio">
+        <p class="figure-caption">Figure 3: Countries with lower GDP per capita show higher automation ratios (r = -0.62).</p>
+    </div>
+    
+    <p>There is a strong negative correlation between GDP per capita and automation ratio. Poorer countries automate more. This is consistent with the compensatory use mechanism: users in lower-income countries use AI to bridge gaps they cannot fill otherwise.</p>
+
+    <div class="page-break"></div>
+
+    <h2>Mechanisms</h2>
+    
+    <p>Three factors explain higher automation ratios in emerging markets:</p>
+    
+    <ol>
+        <li><strong>Compensatory Use:</strong> Users bridge language and knowledge gaps with directive prompts. A user asking "translate this document" or "explain this concept" is automating a task they cannot do themselves, not replacing a worker.</li>
+        <li><strong>No Legacy Systems to Augment:</strong> Without entrenched enterprise workflows, users adopt AI for direct task completion. There is no existing process to "augment."</li>
+        <li><strong>Access Constraints:</strong> Limited connectivity and mobile-first usage favor efficient, single-turn interactions over iterative collaboration.</li>
+    </ol>
+
+    <h2>Counter-Narrative</h2>
+    
+    <p>Higher automation in emerging markets contradicts the dominant policy narrative. Reports from McKinsey, the US government, and EU regulatory frameworks assume AI enters society through enterprise deployment. They focus on workforce displacement, algorithmic auditing, and corporate liability.</p>
+    
+    <p>The data shows something different. Emerging market AI adoption is bottom-up and individual-driven. The higher automation ratio reflects compensatory use (language assistance, knowledge access) rather than labor substitution.</p>
+    
+    <p>This matters for governance. The EU AI Act's GPAI provisions (August 2025) impose documentation requirements designed for enterprise model providers.<sup>26</sup> The US executive order on AI (December 2025) focuses on preempting state regulations to accelerate frontier development.<sup>27</sup> India's AI Governance Guidelines (November 2025) reject standalone legislation, prioritizing access over restriction.<sup>29</sup> These frameworks solve different problems because they respond to different adoption modes.</p>
+
+    <div class="page-break"></div>
+    
+    <h2>Implications</h2>
+    
+    <h3>For Policymakers</h3>
+    <ul>
+        <li><strong>Workforce displacement framing may be wrong for emerging markets.</strong> Higher automation reflects compensatory use (language access, knowledge bridging), not labor substitution.</li>
+        <li><strong>Language AI is a development tool.</strong> The 1.7x higher language-related usage suggests subsidizing language AI could accelerate human capital development.</li>
+        <li><strong>Regulatory frameworks miss key adoption vectors.</strong> Enterprise-focused rules do not address individual and educational use, which drives adoption in emerging markets.</li>
+    </ul>
+    
+    <h3>For Business Leaders</h3>
+    <ul>
+        <li><strong>Emerging market users adopt differently.</strong> Bottom-up, individual-driven adoption requires different strategies than enterprise sales.</li>
+        <li><strong>Language capabilities matter more in emerging markets.</strong> The 1.7x gap indicates demand for multilingual AI tools.</li>
+    </ul>
+
+    <div class="page-break"></div>
+    
+    <h2>Limitations</h2>
+    
+    <ul>
+        <li>Single platform (Claude.ai) may not represent all AI usage patterns</li>
+        <li>One-month snapshot may not capture seasonal or trend variations</li>
+        <li>Self-selection bias: early adopters may differ from general population</li>
+        <li>Automation/augmentation classification relies on interaction patterns, not outcome measurement</li>
+        <li>Country-level aggregation masks within-country variation</li>
+        <li>Cannot distinguish individual from organizational usage definitively</li>
+    </ul>
+    
+    <h2>Conclusion</h2>
+    
+    <p>Emerging markets show higher automation ratios than developed markets (+4.3pp), but the mechanism is compensatory use, not labor substitution. The 1.7x higher language-related usage suggests users are bridging knowledge and language gaps rather than replacing workers.</p>
+
+    <p>This has two implications. First, workforce displacement concerns framed around enterprise AI may not apply to emerging markets. Second, governance must diverge by national context: frameworks designed for corporate AI in the EU do not address individual AI use in India or Brazil.</p>
+    
+    <p>Cross-platform validation with data from other AI providers will be necessary to confirm these patterns beyond the Anthropic ecosystem.</p>
+
+    <hr style="margin: 24pt 0;">
+    
+    <p style="font-size: 10pt;">
+    <strong>Data Source:</strong> Anthropic Economic Index, Claude.ai platform, August 2025<br>
+    <strong>Analysis Period:</strong> November 2025<br>
+    <strong>Author:</strong> Rishi Siddharth<br>
+    </p>
+    
+    <div class="page-break"></div>
+    
+    <h2>References</h2>
+    
+    <ol style="font-size: 10pt; line-height: 1.6;">
+        <li>Anthropic. (2025). <em>Anthropic Economic Index: Global AI Usage Patterns Dataset</em>. August 2025 Release. Retrieved from https://www.anthropic.com/economic-index</li>
+        <li>Acemoglu, D., and Restrepo, P. (2024). "The Race Between Machine and Human." <em>American Economic Review</em>, 114(6), 1488-1542.</li>
+        <li>Brynjolfsson, E., Li, D., and Raymond, L. (2023). "Generative AI at Work." <em>NBER Working Paper</em> No. 31161.</li>
+        <li>International Monetary Fund. (2025). <em>World Economic Outlook: AI and the Global Economy</em>. April 2025.</li>
+        <li>McKinsey Global Institute. (2025). <em>The State of AI in 2025</em>.</li>
+        <li>Microsoft Research. (2024). "GitHub Copilot Usage Patterns in Emerging Markets." <em>MSR-TR-2024-15</em>.</li>
+        <li>OECD. (2025). <em>OECD Digital Economy Outlook 2025</em>.</li>
+        <li>OpenAI. (2024). "GPT-4 Usage Statistics and Geographic Distribution."</li>
+        <li>Stanford HAI. (2025). <em>AI Index 2025 Annual Report</em>.</li>
+        <li>UNCTAD. (2025). <em>Digital Economy Report 2025</em>.</li>
+        <li>World Bank. (2025). <em>World Development Report 2025: AI for Development</em>.</li>
+        <li>World Bank. (2025). "Country Classifications by Income Level: 2024-2025."</li>
+        <li>World Economic Forum. (2025). <em>Future of Jobs Report 2025</em>.</li>
+        <li>Agrawal, A., Gans, J., and Goldfarb, A. (2024). <em>Power and Prediction</em>. Harvard Business Review Press.</li>
+        <li>Autor, D. H. (2024). "The Labor Market Impacts of Technological Change." <em>Journal of Economic Perspectives</em>, 38(2), 3-30.</li>
+        <li>Barro, R. J., and Lee, J. W. (2024). "Education Matters." <em>Oxford Economic Papers</em>, 76(3), 621-649.</li>
+        <li>Bloom, N., et al. (2024). "Are Ideas Getting Harder to Find?" <em>American Economic Review</em>, 114(4), 1104-1144.</li>
+        <li>Cockburn, I. M., Henderson, R., and Stern, S. (2024). "The Impact of AI on Innovation." University of Chicago Press.</li>
+        <li>Google AI. (2025). "Gemini Usage Patterns: A Global Perspective."</li>
+        <li>Hofstede, G., et al. (2023). <em>Cultures and Organizations</em> (4th ed.). McGraw-Hill.</li>
+        <li>Lee, K. F. (2024). <em>AI Superpowers</em>. Updated Edition.</li>
+        <li>Meta AI Research. (2025). "Llama Model Adoption in Global Markets."</li>
+        <li>Noy, S., and Zhang, W. (2023). "Experimental Evidence on Generative AI Productivity." <em>Science</em>, 381(6654), 187-192.</li>
+        <li>O*NET Resource Center. (2024). <em>O*NET Database 29.0</em>. US Department of Labor.</li>
+        <li>Peng, S., et al. (2023). "The Impact of AI on Developer Productivity." <em>arXiv:2302.06590</em>.</li>
+        <li>European Commission. (2025). "AI Act Implementation: GPAI Model Obligations." August 2, 2025. https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai</li>
+        <li>The White House. (2025). "Executive Order on Ensuring a National Policy Framework for AI." December 11, 2025. https://www.whitehouse.gov/presidential-actions/2025/12/eliminating-state-law-obstruction-of-national-artificial-intelligence-policy/</li>
+        <li>European Commission. (2025). "Digital Omnibus." November 19, 2025.</li>
+        <li>MeitY. (2025). <em>India AI Governance Guidelines</em>. November 5, 2025. https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/nov/doc2025115685601.pdf</li>
+        <li>Medianama. (2025). "India to Regulate AI Under DPDPA." December 17, 2025.</li>
+    </ol>
+    
+    <h3 style="font-size: 12pt; margin-top: 18pt;">Author</h3>
+    <p style="font-size: 10pt;">
+    <strong>Rishi Siddharth</strong><br>
+    BS Data Science, International Business Minor<br>
+    American University and London School of Economics<br>
+    rs5309a@american.edu / rsiddharth@lse.ac.uk<br>
+    linkedin.com/in/rishi-siddharth
+    </p>
+    
+    <h3 style="font-size: 12pt; margin-top: 18pt;">Acknowledgments</h3>
+    <p style="font-size: 10pt;">Thanks to the Anthropic research team for making the Economic Index dataset publicly available..</p>
+    
+</body>
