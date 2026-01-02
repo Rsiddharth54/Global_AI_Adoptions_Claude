@@ -24,9 +24,8 @@ pip install -r requirements.txt
 jupyter notebook notebooks/analysis.ipynb
 ```
 
-Or view the pre-generated results:
-- **[View Report (PDF)](paper/Global_AI_Adoption_Patterns.pdf)**
-- **[Interactive Report (HTML)](outputs/report.html)**
+Or view the report in the folder (REPORTS):
+
 
 ## Project Structure
 
