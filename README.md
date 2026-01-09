@@ -6,25 +6,7 @@ Analysis of AI usage patterns across emerging and developed markets using Anthro
 
 Emerging markets show **4-6 percentage points higher automation rates** compared to developed markets, suggesting different AI adoption patterns based on economic development.
 
-## Quick Start
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/Rsiddharth54/Global_AI_Adoptions_Claude.git
-cd Global_AI_Adoptions_Claude
-```
-
-### 2. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Run the analysis
-```bash
-jupyter notebook notebooks/analysis.ipynb
-```
-
-Or view the report in the folder (REPORTS):
+**view the report in the folder (REPORTS):**
 
 
 ## Project Structure
